@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # nyan.sh - nyan a simple netcat wrapper
 #
@@ -34,31 +34,33 @@
 
 function helpout()
 {
-  echo "nyan 1.2.0 - a simple GNU netcat wrapper"
-  echo "  +      o     +              o   "
-  echo "    +             o     +       + "
-  echo "o          +                      "
-  echo "    o  +           +        +     "
-  echo "+        o     o       +        o "
-  echo "-_-_-_-_-_-_-_,------,      o     "
-  echo "_-_-_-_-_-_-_-|   /\_/\           "
-  echo "-_-_-_-_-_-_-~|__( ^ .^)  +     + "
-  echo "_-_-_-_-_-_-_-\"\"  \"\"          "
-  echo "+      o         o   +       o    "
-  echo "   +         +                    "
-  echo "o        o         o      o     + "
-  echo "   o           +                  "
-  echo "+      +     o        o      +    "
-  echo "basic usage:"
-  echo "  nyan get <IP> <PORT> <FILENAME>"
-  echo "  nyan serve <PORT> <FILENAME>"
-  echo "  nyan raw <IP> <PORT>"
-  echo "  nyan scan <IP> <PORT_MIN> <PORT_MAX>"
-  echo "  nyan proxy <IP> <PORT_SRC> <PORT_DEST>"
-  echo "  nyan command <PORT> <COMMAND>"
-  echo "  nyan server <PORT>"
-  echo "  nyan http <PORT> <FILENAME>"
-  echo "  nyan forward <IP> <PORT> <LOCALPORT>"
+  cat << EOF
+nyan 1.2.0 - a simple GNU netcat wrapper
+  +      o     +              o
+    +             o     +       +
+o          +
+    o  +           +        +
++        o     o       +        o
+-_-_-_-_-_-_-_,------,      o
+_-_-_-_-_-_-_-|   /\_/\
+-_-_-_-_-_-_-~|__( ^ .^)  +     +
+_-_-_-_-_-_-_-\\  \\
++      o         o   +       o
+   +         +
+o        o         o      o     +
+   o           +
++      +     o        o      +
+basic usage:
+  nyan get <IP> <PORT> <FILENAME>
+  nyan serve <PORT> <FILENAME>
+  nyan raw <IP> <PORT>
+  nyan scan <IP> <PORT_MIN> <PORT_MAX>
+  nyan proxy <IP> <PORT_SRC> <PORT_DEST>
+  nyan command <PORT> <COMMAND>
+  nyan server <PORT>
+  nyan http <PORT> <FILENAME>
+  nyan forward <IP> <PORT> <LOCALPORT>
+EOF
 }
 
 function valid_ip()
